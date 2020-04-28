@@ -11,7 +11,6 @@
 td {
     text-align: center;
     vertical-align: top;
-    word-break: break-all;
     border: 1px solid #D6D6D6; 
     font-family: "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック体", "YuGothic", "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "メイリオ", "Meiryo", "verdana", sans-serif;
 }
@@ -30,7 +29,7 @@ td.story {
 
 tr {
     border: 1px solid #D6D6D6;
-    border-collapse: collapse
+    border-collapse: collapse;
 }
 
 .search-area input[type="text"] {
