@@ -13,8 +13,6 @@ td {
     vertical-align: top;
     border: 1px solid #D6D6D6;
     font-family: "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック体", "YuGothic", "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "メイリオ", "Meiryo", "verdana", sans-serif;
-
-
 }
 
 body,
@@ -24,6 +22,7 @@ textarea {
 }
 
 td.story {
+    min-width: 22em;
     max-width: 22em;
     word-break: break-all;
 }
