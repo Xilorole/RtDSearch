@@ -1,3 +1,13 @@
+@import url(http://fonts.googleapis.com/earlyaccess/notosansjapanese.css);
+
+.clearfix:after {
+    content: ".";
+    display: block;
+    clear: both;
+    height: 0;
+    visibility: hidden;
+}
+
 td {
     text-align: center;
     vertical-align: top;
