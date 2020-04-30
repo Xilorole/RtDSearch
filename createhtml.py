@@ -13,6 +13,7 @@ findex.write("""<html>
     <div class="wrapper">
         <div class="search-area">
             <input type="text" id="search-text" placeholder="検索キー(2文字以上)">
+            <button id="copy-link">copy link to this page</button>
             <div class="search-result">
                 <div class="search-result__hit-num"></div>
                 <div id="search-result__list"></div>
@@ -43,8 +44,15 @@ for filename in sorted(os.listdir("./rawcsv")):
         for line in f.readlines():
             if len(line.split(",")) < 5:
                 continue
+
             no, name, star, attr, story = line.split(",")[:5]
             cutins = line.split(",")[5:]
+
+            # storyの中に半角カンマが含まれるものをcatch
+            if int(no) in {883, 952, 989, 1400, 1577, 1600}:
+                no, name, star, attr, story1, story2 = line.split(",")[:6]
+                story = f"{story1},{story2}"
+                cutins = line.split(",")[6:]
 
             cutin_str = "</td><td>".join([f"{text}" for text in cutins])
             findex.write(

@@ -25,7 +25,7 @@ $(function () {
 
     CopyLink = function () {
         //p要素の文字列を取得
-        var text = location.href + "?q=" + $("#search-text").val();
+        var text = location.href.replace(location.search, "") + "?q=" + $("#search-text").val();
         //textareaを生成
         var area = document.createElement("textarea");
         //p要素の内容をtextareaに記述
