@@ -18,6 +18,31 @@ $(function () {
         });
     };
 
+
+
     // searchWordの実行
     $('#search-text').on('input', searchWord);
+
+    CopyLink = function () {
+        //p要素の文字列を取得
+        var text = location.href + "?q=" + $("#search-text").val();
+        //textareaを生成
+        var area = document.createElement("textarea");
+        //p要素の内容をtextareaに記述
+        area.textContent = text;
+        //生成したものをdocumentに追加
+        document.body.appendChild(area);
+        //選択/コピーして・・
+        area.select();
+        document.execCommand("copy");
+        //すぐに消す。
+        document.body.removeChild(area);
+    };
+    $('#copy-link').on('click', CopyLink);
+    var param = decodeURI(location.search).replace("?q=", "")
+
+    if (param.length > 0) {
+        $("#search-text").val(param).trigger('input', [true]);
+    }
+
 });
