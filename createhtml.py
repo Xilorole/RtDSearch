@@ -7,6 +7,7 @@ findex.write("""<html>
 
 <head>
     <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/earlyaccess/notosansjp.css">
 </head>
 
 <body>
