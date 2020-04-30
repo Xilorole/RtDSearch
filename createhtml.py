@@ -34,7 +34,7 @@ findex.write("""<html>
             </thead>
             <tbody class="target-area">""")
 
-for filename in os.listdir("./rawcsv"):
+for filename in sorted(os.listdir("./rawcsv")):
     if "csv" not in filename:
         continue
     with open(f"./rawcsv/{filename}") as f:
